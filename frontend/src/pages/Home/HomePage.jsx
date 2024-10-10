@@ -1,14 +1,13 @@
 import { useAuthStore } from "../../store/authUser"
 import AuthScreen from "./AuthScreen"
-import Homescreen from "./Homescreen"
-
+import HomeScreen from './HomeScreen'
 const HomePage = () => {
 
   const {user} = useAuthStore()
 
   return (
     <div>
-      {user ? <Homescreen/> : <AuthScreen/>}
+      {user ? <HomeScreen/> : <AuthScreen/>}
     </div>
   )
 }
